@@ -2,62 +2,592 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#050505">
-<title>Asas de Cinza | Wings of Ash</title>
-<meta name="description" content="Links oficiais de Asas de Cinza | Wings of Ash, de Camila Donini.">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#090909">
+<title>Asas de Cinza — Camila Donini</title>
+<meta name="description" content="Links oficiais de Asas de Cinza / Wings of Ash, de Camila Donini.">
+
 <style>
-:root{--bg:#050505;--panel:#0b0b0b;--text:#f0eee9;--muted:#98958e;--gold:#9b7c3f;--line:rgba(255,255,255,.10);--serif:Georgia,"Times New Roman",serif;--sans:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-*{box-sizing:border-box}html{background:var(--bg)}body{margin:0;min-height:100vh;color:var(--text);font-family:var(--sans);background:radial-gradient(circle at 50% -10%,rgba(155,124,63,.13),transparent 34%),#050505}
-body:before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.22;background-image:radial-gradient(circle,rgba(255,255,255,.55) 0 1px,transparent 1.5px),radial-gradient(circle,rgba(255,255,255,.25) 0 1px,transparent 1.4px);background-size:103px 103px,157px 157px;background-position:18px 24px,68px 41px}
-a{color:inherit;-webkit-tap-highlight-color:transparent}.page{width:min(calc(100% - 28px),560px);margin:auto;padding:44px 0 34px}.identity{text-align:center;margin-bottom:27px}
-.ornament{width:64px;height:1px;margin:0 auto 22px;background:linear-gradient(90deg,transparent,var(--gold),transparent);position:relative}.ornament:after{content:"✦";position:absolute;left:50%;top:50%;transform:translate(-50%,-52%);background:var(--bg);padding:0 8px;color:#baa061;font-size:12px}
-h1{margin:0;font-family:var(--serif);font-weight:400;font-size:clamp(31px,9vw,43px);line-height:.98;text-transform:uppercase;letter-spacing:.07em}h1 .en{display:block;margin-top:10px;color:#8c887f;font-size:.42em;letter-spacing:.22em}
-.author{margin:13px 0 0;color:#b7b3ab;font-family:var(--serif);font-size:13px;text-transform:uppercase;letter-spacing:.22em}.available{display:inline-flex;align-items:center;gap:8px;margin-top:18px;padding:8px 12px;border:1px solid rgba(155,124,63,.28);border-radius:999px;background:rgba(155,124,63,.06);color:#c7b382;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}.dot{width:6px;height:6px;border-radius:50%;background:#b89b5d;box-shadow:0 0 10px rgba(184,155,93,.45)}
-.books{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:18px}.book{overflow:hidden;border:1px solid var(--line);border-radius:18px;background:var(--panel);text-decoration:none;transition:.18s ease}.book:hover,.link:hover{transform:translateY(-2px);border-color:rgba(155,124,63,.42)}.book img{display:block;width:100%;aspect-ratio:2/3;object-fit:cover}.caption{padding:12px 12px 14px}.caption strong{display:block;font-family:var(--serif);font-size:15px;font-weight:400}.caption small{display:block;margin-top:4px;color:var(--muted);font-size:10px;line-height:1.4}
-.link{min-height:62px;border:1px solid var(--line);border-radius:16px;display:flex;align-items:center;gap:14px;padding:12px 15px;text-decoration:none;background:rgba(255,255,255,.022);transition:.18s ease}.featured{min-height:66px;margin-bottom:12px;background:linear-gradient(135deg,rgba(155,124,63,.14),rgba(255,255,255,.025));border-color:rgba(155,124,63,.28)}
-.links{display:grid;gap:10px}.icon{width:38px;height:38px;flex:0 0 38px;border-radius:11px;border:1px solid rgba(255,255,255,.08);display:grid;place-items:center;color:#c6b17d;background:rgba(255,255,255,.025);font-size:11px;font-weight:800}.copy{min-width:0;flex:1}.copy strong{display:block;font-size:13px;font-weight:650}.copy small{display:block;margin-top:4px;color:var(--muted);font-size:10.5px;line-height:1.35}.arrow{color:#6d685e;font-size:18px}.label{margin:25px 0 11px;color:#77736b;font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:.18em;text-align:center}.footer{padding-top:28px;text-align:center;color:#585650;font-size:9.5px;line-height:1.6}.footer strong{color:#79756d;font-weight:500}
-@media(max-width:380px){.page{width:min(calc(100% - 22px),560px);padding-top:34px}.book{border-radius:15px}.link{border-radius:14px}}
+:root {
+  --bg:#080808;
+  --panel:rgba(11,11,11,.82);
+  --panel-2:rgba(18,18,18,.86);
+  --panel-hover:rgba(24,24,24,.92);
+  --text:#f6f3ee;
+  --muted:#b8b1a5;
+  --muted-2:#7a7368;
+  --gold:#c39a58;
+  --gold-2:#d7b577;
+  --gold-line:rgba(195,154,88,.42);
+  --gold-soft:rgba(195,154,88,.14);
+  --cream:#f3ede1;
+  --line:rgba(255,255,255,.13);
+  --line-2:rgba(255,255,255,.18);
+  --serif:Georgia,"Times New Roman",serif;
+  --sans:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+}
+
+* { box-sizing:border-box; }
+
+html {
+  background:var(--bg);
+  min-height:100%;
+}
+
+body {
+  margin:0;
+  min-height:100vh;
+  color:var(--text);
+  font-family:var(--sans);
+  background:
+    linear-gradient(rgba(5,5,5,.84), rgba(5,5,5,.90)),
+    url('bg-vertical.png') center top / cover no-repeat fixed,
+    #080808;
+  position:relative;
+}
+
+body::before {
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:-1;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(21,28,45,.28), transparent 30%),
+    radial-gradient(circle at 85% 18%, rgba(255,214,170,.10), transparent 12%),
+    radial-gradient(circle at 15% 16%, rgba(255,255,255,.08), transparent 16%);
+  mix-blend-mode:screen;
+}
+
+body::after {
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:-1;
+  background:
+    linear-gradient(180deg, rgba(0,0,0,.15), rgba(0,0,0,.35)),
+    radial-gradient(circle, rgba(255,255,255,.35) 0 1px, transparent 1.7px);
+  background-size:auto, 140px 140px;
+  background-position:0 0, 20px 38px;
+  opacity:.22;
+}
+
+a {
+  color:inherit;
+  -webkit-tap-highlight-color:transparent;
+}
+
+.page {
+  width:min(calc(100% - 24px), 560px);
+  margin:0 auto;
+  padding:20px 0 40px;
+}
+
+.shell {
+  background:linear-gradient(180deg, rgba(8,8,8,.56), rgba(8,8,8,.76));
+  border:1px solid rgba(255,255,255,.09);
+  border-radius:28px;
+  padding:18px 16px 26px;
+  backdrop-filter: blur(14px);
+  box-shadow:
+    0 18px 50px rgba(0,0,0,.40),
+    inset 0 0 0 1px rgba(195,154,88,.04);
+}
+
+.topbar {
+  display:flex;
+  justify-content:flex-end;
+  margin-bottom:14px;
+}
+
+.lang {
+  display:flex;
+  padding:4px;
+  border:1px solid var(--line-2);
+  border-radius:999px;
+  background:rgba(18,18,18,.82);
+  backdrop-filter: blur(12px);
+  box-shadow:0 8px 22px rgba(0,0,0,.20);
+}
+
+.lang button {
+  min-width:46px;
+  border:0;
+  background:transparent;
+  color:#b9b3a8;
+  font:inherit;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.08em;
+  border-radius:999px;
+  padding:9px 13px;
+  cursor:pointer;
+  transition:.18s ease;
+}
+
+.lang button.active {
+  background:var(--cream);
+  color:#111;
+}
+
+.identity {
+  text-align:center;
+  padding:8px 8px 4px;
+}
+
+.ornament {
+  width:84px;
+  height:1px;
+  margin:0 auto 22px;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);
+  position:relative;
+}
+
+.ornament::after {
+  content:"✦";
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-52%);
+  background:rgba(8,8,8,.95);
+  padding:0 9px;
+  color:var(--gold-2);
+  font-size:13px;
+}
+
+h1 {
+  margin:0;
+  font-family:var(--serif);
+  font-weight:400;
+  font-size:clamp(39px,11vw,52px);
+  line-height:.94;
+  text-transform:uppercase;
+  letter-spacing:.055em;
+  text-shadow:0 4px 24px rgba(0,0,0,.58);
+}
+
+.author {
+  margin:14px 0 0;
+  color:#ddd7cc;
+  font-family:var(--serif);
+  font-size:14px;
+  text-transform:uppercase;
+  letter-spacing:.22em;
+}
+
+.tagline {
+  max-width:390px;
+  margin:14px auto 0;
+  color:var(--muted);
+  font-size:12px;
+  line-height:1.6;
+}
+
+.available {
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  margin-top:18px;
+  padding:9px 14px;
+  border:1px solid var(--gold-line);
+  border-radius:999px;
+  background:var(--gold-soft);
+  color:#dfc58e;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+.dot {
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:#dcb56d;
+  box-shadow:0 0 12px rgba(220,181,109,.5);
+}
+
+.cover-wrap {
+  display:flex;
+  justify-content:center;
+  margin:26px 0 24px;
+}
+
+.cover-link {
+  width:min(285px,74vw);
+  display:block;
+  text-decoration:none;
+  border-radius:22px;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.18);
+  box-shadow:
+    0 30px 70px rgba(0,0,0,.50),
+    0 0 0 1px rgba(195,154,88,.08);
+  transition:.2s ease;
+}
+
+.cover-link:hover {
+  transform:translateY(-4px);
+  border-color:rgba(195,154,88,.55);
+}
+
+.cover-link img {
+  display:block;
+  width:100%;
+  aspect-ratio:2/3;
+  object-fit:cover;
+}
+
+.group {
+  margin-top:18px;
+}
+
+.group-title {
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin:0 4px 10px;
+  color:#d5b676;
+  font-size:10px;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.18em;
+}
+
+.group-title::after {
+  content:"";
+  height:1px;
+  flex:1;
+  background:linear-gradient(90deg,rgba(195,154,88,.40),transparent);
+}
+
+.primary {
+  width:100%;
+  min-height:78px;
+  border:0;
+  border-radius:18px;
+  display:flex;
+  align-items:center;
+  gap:15px;
+  padding:14px 16px;
+  text-decoration:none;
+  background:var(--cream);
+  color:#111;
+  box-shadow:0 18px 36px rgba(0,0,0,.30);
+  transition:.2s ease;
+}
+
+.primary:hover {
+  transform:translateY(-2px);
+  box-shadow:0 20px 42px rgba(0,0,0,.36);
+}
+
+.links {
+  display:grid;
+  gap:10px;
+}
+
+.link {
+  min-height:70px;
+  border:1px solid var(--line);
+  border-radius:17px;
+  display:flex;
+  align-items:center;
+  gap:14px;
+  padding:13px 15px;
+  text-decoration:none;
+  background:var(--panel);
+  backdrop-filter: blur(10px);
+  box-shadow:0 12px 24px rgba(0,0,0,.18);
+  transition:.18s ease;
+}
+
+.link:hover {
+  transform:translateY(-2px);
+  background:var(--panel-hover);
+  border-color:var(--gold-line);
+}
+
+.author-card {
+  background:linear-gradient(135deg, rgba(18,18,18,.88), rgba(23,19,15,.92));
+  border-color:rgba(195,154,88,.24);
+}
+
+.icon {
+  width:44px;
+  height:44px;
+  flex:0 0 44px;
+  border-radius:12px;
+  display:grid;
+  place-items:center;
+  background:#171717;
+  border:1px solid rgba(255,255,255,.08);
+  overflow:hidden;
+}
+
+.primary .icon {
+  background:#171717;
+  border-color:#171717;
+}
+
+.icon img {
+  max-width:24px;
+  max-height:24px;
+  display:block;
+  filter: invert(1) brightness(1.06);
+}
+
+.icon img.amazon {
+  max-width:28px;
+  max-height:28px;
+}
+
+.copy {
+  min-width:0;
+  flex:1;
+}
+
+.copy strong {
+  display:block;
+  color:#f2eee7;
+  font-size:14px;
+  font-weight:760;
+  line-height:1.24;
+}
+
+.copy small {
+  display:block;
+  margin-top:5px;
+  color:#a29b90;
+  font-size:11px;
+  line-height:1.35;
+}
+
+.primary .copy strong {
+  color:#111;
+}
+
+.primary .copy small {
+  color:#5f5a54;
+}
+
+.arrow {
+  color:#8a8379;
+  font-size:21px;
+  margin-left:auto;
+}
+
+.primary .arrow {
+  color:#5f5953;
+}
+
+.footer {
+  padding-top:32px;
+  text-align:center;
+  color:#726b60;
+  font-size:9.5px;
+  line-height:1.65;
+}
+
+.footer strong {
+  color:#9b9387;
+  font-weight:600;
+}
+
+@media (min-width: 760px) {
+  body {
+    background:
+      linear-gradient(rgba(5,5,5,.82), rgba(5,5,5,.90)),
+      url('bg-horizontal.png') center center / cover no-repeat fixed,
+      #080808;
+  }
+}
+
+@media (max-width: 420px) {
+  .page {
+    width:min(calc(100% - 18px), 560px);
+    padding-top:14px;
+  }
+
+  .shell {
+    border-radius:24px;
+    padding:16px 14px 24px;
+  }
+
+  .cover-link {
+    width:min(260px,76vw);
+  }
+
+  .primary,
+  .link {
+    border-radius:15px;
+  }
+}
 </style>
 </head>
+
 <body>
 <main class="page">
-<header class="identity">
-<div class="ornament" aria-hidden="true"></div>
-<h1>Asas de Cinza<span class="en">Wings of Ash</span></h1>
-<p class="author">Camila Donini</p>
-<div class="available"><span class="dot"></span>Já disponível · Available now</div>
-</header>
+  <div class="shell">
 
-<div class="books">
-<a class="book" href="https://www.amazon.com.br/Asas-Cinza-Wings-Ash-Livro-ebook/dp/B0G4KZD1Z7/" target="_blank" rel="noopener noreferrer">
-<img src="asas-de-cinza.png" alt="Capa de Asas de Cinza">
-<div class="caption"><strong>Asas de Cinza</strong><small>Comprar em português</small></div>
-</a>
-<a class="book" href="https://www.amazon.com.br/Wings-Ash-Asas-Cinza-English-ebook/dp/B0G4L12M82" target="_blank" rel="noopener noreferrer">
-<img src="wings-of-ash.png" alt="Capa de Wings of Ash">
-<div class="caption"><strong>Wings of Ash</strong><small>Buy in English</small></div>
-</a>
-</div>
+    <div class="topbar">
+      <div class="lang" aria-label="Selecionar idioma">
+        <button class="active" data-lang="pt">PT</button>
+        <button data-lang="en">EN</button>
+      </div>
+    </div>
 
-<a class="link featured" href="https://www.amazon.com.br/stores/Camila-Donini/author/B0G64SMRWR?ref=ap_rdr&shoppingPortalEnabled=true" target="_blank" rel="noopener noreferrer">
-<div class="icon">AMZ</div><div class="copy"><strong>Amazon · Camila Donini</strong><small>Livros, edições e perfil da autora</small></div><div class="arrow">›</div>
-</a>
+    <header class="identity">
+      <div class="ornament" aria-hidden="true"></div>
 
-<p class="label">Acompanhe · Follow</p>
-<div class="links">
-<a class="link" href="https://www.instagram.com/asasdecinza" target="_blank" rel="noopener noreferrer">
-<div class="icon">IG</div><div class="copy"><strong>Instagram</strong><small>@asasdecinza</small></div><div class="arrow">›</div>
-</a>
-<a class="link" href="https://www.tiktok.com/@asas.de.cinza.win" target="_blank" rel="noopener noreferrer">
-<div class="icon">TT</div><div class="copy"><strong>TikTok</strong><small>@asas.de.cinza.win</small></div><div class="arrow">›</div>
-</a>
-<a class="link" href="https://open.spotify.com/playlist/1SEk017gwB2ebmLktDyV6J?pi=simEyNB3QqKz8&si=SkVQR_y3SxqQPXvKxphcxg&utm_medium=share&utm_source=linktree&nd=1&dlsi=2604964c0d13498b" target="_blank" rel="noopener noreferrer">
-<div class="icon">♫</div><div class="copy"><strong>Playlist oficial</strong><small>Spotify · trilha de Asas de Cinza</small></div><div class="arrow">›</div>
-</a>
-</div>
+      <h1 id="mainTitle">Asas de Cinza</h1>
+      <p class="author">Camila Donini</p>
 
-<footer class="footer"><strong>Asas de Cinza · Wings of Ash</strong><br>© 2026 Camila Duarte Donini</footer>
+      <p class="tagline"
+         data-pt="Livro, autora, redes e trilha sonora — tudo em um só lugar."
+         data-en="Book, author, social media and soundtrack — all in one place.">
+        Livro, autora, redes e trilha sonora — tudo em um só lugar.
+      </p>
+
+      <div class="available">
+        <span class="dot"></span>
+        <span data-pt="Já disponível" data-en="Available now">Já disponível</span>
+      </div>
+    </header>
+
+    <div class="cover-wrap">
+      <a id="coverLink" class="cover-link" href="https://www.amazon.com.br/Asas-Cinza-Wings-Ash-Livro-ebook/dp/B0G4KZD1Z7/" target="_blank" rel="noopener noreferrer">
+        <img id="coverImage" src="asas-de-cinza.png" alt="Capa de Asas de Cinza">
+      </a>
+    </div>
+
+    <section class="group">
+      <h2 class="group-title" data-pt="Livro" data-en="Book">Livro</h2>
+
+      <a id="buyLink" class="primary" href="https://www.amazon.com.br/Asas-Cinza-Wings-Ash-Livro-ebook/dp/B0G4KZD1Z7/" target="_blank" rel="noopener noreferrer">
+        <div class="icon" aria-hidden="true">
+          <img class="amazon" src="icon-amazon.png" alt="">
+        </div>
+        <div class="copy">
+          <strong data-pt="Comprar Asas de Cinza" data-en="Buy Wings of Ash">Comprar Asas de Cinza</strong>
+          <small data-pt="Disponível na Amazon" data-en="Available on Amazon">Disponível na Amazon</small>
+        </div>
+        <div class="arrow">›</div>
+      </a>
+    </section>
+
+    <section class="group">
+      <h2 class="group-title" data-pt="Autora" data-en="Author">Autora</h2>
+
+      <a class="link author-card" href="https://www.amazon.com.br/stores/Camila-Donini/author/B0G64SMRWR?ref=ap_rdr&shoppingPortalEnabled=true" target="_blank" rel="noopener noreferrer">
+        <div class="icon" aria-hidden="true">
+          <img class="amazon" src="icon-amazon.png" alt="">
+        </div>
+        <div class="copy">
+          <strong data-pt="Camila Donini na Amazon" data-en="Camila Donini on Amazon">Camila Donini na Amazon</strong>
+          <small data-pt="Perfil da autora e outras edições" data-en="Author profile and editions">Perfil da autora e outras edições</small>
+        </div>
+        <div class="arrow">›</div>
+      </a>
+    </section>
+
+    <section class="group">
+      <h2 class="group-title" data-pt="Acompanhe" data-en="Follow">Acompanhe</h2>
+
+      <div class="links">
+        <a class="link" href="https://www.instagram.com/asasdecinza" target="_blank" rel="noopener noreferrer">
+          <div class="icon" aria-hidden="true">
+            <img src="icon-instagram.png" alt="">
+          </div>
+          <div class="copy">
+            <strong>Instagram</strong>
+            <small>@asasdecinza</small>
+          </div>
+          <div class="arrow">›</div>
+        </a>
+
+        <a class="link" href="https://www.tiktok.com/@asas.de.cinza.win" target="_blank" rel="noopener noreferrer">
+          <div class="icon" aria-hidden="true">
+            <img src="icon-tiktok.png" alt="">
+          </div>
+          <div class="copy">
+            <strong>TikTok</strong>
+            <small>@asas.de.cinza.win</small>
+          </div>
+          <div class="arrow">›</div>
+        </a>
+
+        <a class="link" href="https://open.spotify.com/playlist/1SEk017gwB2ebmLktDyV6J?pi=simEyNB3QqKz8&si=SkVQR_y3SxqQPXvKxphcxg&utm_medium=share&utm_source=linktree&nd=1&dlsi=2604964c0d13498b" target="_blank" rel="noopener noreferrer">
+          <div class="icon" aria-hidden="true">
+            <img src="icon-spotify.png" alt="">
+          </div>
+          <div class="copy">
+            <strong data-pt="Playlist oficial" data-en="Official playlist">Playlist oficial</strong>
+            <small data-pt="Ouça no Spotify" data-en="Listen on Spotify">Ouça no Spotify</small>
+          </div>
+          <div class="arrow">›</div>
+        </a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <strong id="footerBook">Asas de Cinza</strong><br>
+      © 2026 Camila Duarte Donini
+    </footer>
+
+  </div>
 </main>
+
+<script>
+const AMAZON_PT = 'https://www.amazon.com.br/Asas-Cinza-Wings-Ash-Livro-ebook/dp/B0G4KZD1Z7/';
+const AMAZON_EN = 'https://www.amazon.com.br/Wings-Ash-Asas-Cinza-English-ebook/dp/B0G4L12M82';
+
+const buttons = document.querySelectorAll("[data-lang]");
+const translated = document.querySelectorAll("[data-pt][data-en]");
+const title = document.getElementById("mainTitle");
+const footerBook = document.getElementById("footerBook");
+const coverImage = document.getElementById("coverImage");
+const coverLink = document.getElementById("coverLink");
+const buyLink = document.getElementById("buyLink");
+
+function setLanguage(lang) {
+  translated.forEach(el => {
+    if (el.dataset[lang]) el.textContent = el.dataset[lang];
+  });
+
+  buttons.forEach(btn => {
+    btn.classList.toggle("active", btn.dataset.lang === lang);
+  });
+
+  if (lang === "en") {
+    document.documentElement.lang = "en";
+    document.title = "Wings of Ash — Camila Donini";
+    title.textContent = "Wings of Ash";
+    footerBook.textContent = "Wings of Ash";
+    coverImage.src = "wings-of-ash.png";
+    coverImage.alt = "Wings of Ash book cover";
+    coverLink.href = AMAZON_EN;
+    buyLink.href = AMAZON_EN;
+  } else {
+    document.documentElement.lang = "pt-BR";
+    document.title = "Asas de Cinza — Camila Donini";
+    title.textContent = "Asas de Cinza";
+    footerBook.textContent = "Asas de Cinza";
+    coverImage.src = "asas-de-cinza.png";
+    coverImage.alt = "Capa de Asas de Cinza";
+    coverLink.href = AMAZON_PT;
+    buyLink.href = AMAZON_PT;
+  }
+
+  localStorage.setItem("asas-lang", lang);
+}
+
+buttons.forEach(btn => {
+  btn.addEventListener("click", () => setLanguage(btn.dataset.lang));
+});
+
+setLanguage(localStorage.getItem("asas-lang") === "en" ? "en" : "pt");
+</script>
 </body>
 </html>
